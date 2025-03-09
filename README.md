@@ -34,3 +34,23 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+# Miro Board Clone
+
+## Architecture
+- Next.js for frontend
+- Convex for backend
+- Liveblocks for real-time collaboration
+- Clerk for authentication
+
+## Development
+Detailed setup instructions, architecture decisions, and contribution guidelines.
+
+## Testing
+Instructions for running tests and test coverage reports.
+
+## Deployment
+Step-by-step deployment guide for various environments.
+
+## Performance Optimization
+Guidelines for maintaining performance as the app scales.

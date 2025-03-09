@@ -127,4 +127,22 @@ export enum CanvasMode {
   Pencil,
 };
 
-export type Layer = RectangleLayer | EllipseLayer | PathLayer | TextLayer | NoteLayer;
+export interface Layer {
+  // Add version control
+  version: number;
+  history: LayerHistory[];
+  // Add collaboration features
+  lastEditedBy: string;
+  lastEditedAt: Date;
+  // Add permissions
+  permissions: {
+    canEdit: string[];
+    canView: string[];
+  };
+}
+
+export interface LayerHistory {
+  timestamp: Date;
+  userId: string;
+  changes: Partial<Layer>;
+}

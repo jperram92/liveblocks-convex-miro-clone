@@ -177,3 +177,23 @@ export function getSvgPathFromStroke(stroke: number[][]): string {
   d.push('Z');
   return d.join(' ');
 }
+
+// Add debounce utility
+export const debounce = <T extends (...args: any[]) => any>(
+  func: T,
+  wait: number
+) => {
+  let timeout: NodeJS.Timeout;
+  return (...args: Parameters<T>) => {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => func(...args), wait);
+  };
+};
+
+// Add virtualization helper for large canvases
+export const getVisibleLayers = (
+  layers: Layer[],
+  viewport: XYWH
+): Layer[] => {
+  return layers.filter(layer => isLayerVisible(layer, viewport));
+};
